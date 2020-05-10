@@ -25,6 +25,11 @@ Vagrant.configure("2") do |config|
     #
     # provision
     #
+    # /etc/environment の配置
+    webapp.vm.provision "file", source: "./provision/environment/local", destination: "/tmp/environment.local"
+    webapp.vm.provision "shell", inline: <<-SHELL
+      mv -f /tmp/environment.local /etc/environment
+    SHELL
     # /etc/nginx/conf.d/* の配置
     webapp.vm.provision "file", source: "./provision/webapp/nginx.conf.d", destination: "/tmp/nginx.conf.d"
     webapp.vm.provision "shell", inline: <<-SHELL
