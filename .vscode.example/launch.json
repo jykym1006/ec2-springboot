@@ -11,6 +11,15 @@
             "hostName": "192.168.33.10",
             // "hostName": "app.ec2-springboot.example.com", はブレークポイントが動作しないのでNG
             "port": 5005
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)",
+            "request": "launch",
+            "mainClass": "org.springframework.boot.devtools.RemoteSpringApplication",
+            "args": [
+              "http://192.168.33.10:8080"
+            ]
         }
     ]
 }
