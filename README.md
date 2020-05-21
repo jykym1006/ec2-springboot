@@ -30,6 +30,8 @@ Listening for transport dt_socket at address: 5005
 
 ### VSCodeの場合
 
+※ 拡張機能「Java Extension Pack」「Spring Boot Extension Pack」が必要になります。  
+
 本プロジェクトのWorkspaceを開く。  
 左メニューのデバッグアイコンをクリック、Debug (Attach), Debug (Launch) の両方を起動します。  
 ※ 前者はデバッガのアタッチで、後者は「Remote Update and Restart」機能のサービス起動です。  
